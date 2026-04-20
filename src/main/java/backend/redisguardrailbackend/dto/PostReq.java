@@ -1,0 +1,4 @@
+package backend.redisguardrailbackend.dto;
+
+public class PostReq {
+}

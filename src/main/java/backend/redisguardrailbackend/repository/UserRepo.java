@@ -1,6 +1,6 @@
-package backend.redisguardrailbackend.Repository;
+package backend.redisguardrailbackend.repository;
 
-import backend.redisguardrailbackend.Entities.User;
+import backend.redisguardrailbackend.entities.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface UserRepo extends JpaRepository<User,Long> {
