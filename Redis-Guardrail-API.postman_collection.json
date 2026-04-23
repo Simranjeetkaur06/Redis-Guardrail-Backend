@@ -1,0 +1,157 @@
+{
+  "info": {
+    "_postman_id": "fb1a770e-c9a4-4cb8-b599-2350dc1cc1c8",
+    "name": "Redis-Guardrail-API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "54228134",
+    "_collection_link": "https://go.postman.co/collection/54228134-fb1a770e-c9a4-4cb8-b599-2350dc1cc1c8?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Create User",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"username\": \"Simran\",\n  \"isPremium\": true\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/users",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "users"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Bot",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Bot1\",\n  \"personaDescription\": \"I am a friendly bot\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/bots",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "bots"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Post",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"authorId\": 1,\n  \"content\": \"My First Post\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/posts",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "posts"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Add Comment",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"authorId\": 1,\n  \"content\": \"Nice post!\",\n  \"depthLevel\": 1,\n  \"isBot\": true,\n  \"botId\": 1\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/posts/1/comments",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "posts",
+            "1",
+            "comments"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Like Post",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/posts/1/like?userId=1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "posts",
+            "1",
+            "like"
+          ],
+          "query": [
+            {
+              "key": "userId",
+              "value": "1"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
